@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get "products/index"
+  get "products/show"
+  get "products/create"
+  get "products/update"
+  get "products/destroy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -15,4 +20,6 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+
+  resources :products
 end
